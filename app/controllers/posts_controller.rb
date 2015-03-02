@@ -1,15 +1,15 @@
 class PostsController < ApplicationController
 
   def index
-
+    @posts = Post.all
   end
 
   def show
-
+    @post = Post.find(params[:id])
   end
 
   def new
-
+    @post = Post.new
   end
 
   def edit
@@ -17,7 +17,10 @@ class PostsController < ApplicationController
   end
 
   def create
+    @post = Post.new(post_params)
+    @post.save
 
+    redirect_to @post
   end
 
   def update
@@ -29,7 +32,7 @@ class PostsController < ApplicationController
   end
 
   private
-    def params_hash
-      # params.require(:post).permit(:title, :body)
+    def post_params
+      params.require(:post).permit(:title, :body)
     end
 end
