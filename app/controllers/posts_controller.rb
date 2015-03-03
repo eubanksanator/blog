@@ -39,7 +39,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     if @post.destroy
-      redirect_to posts_url
+      redirect_to root
     end
   end
 
