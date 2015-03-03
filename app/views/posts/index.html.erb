@@ -1,5 +1,7 @@
 <div class="container">
 
+<%= notice %>
+
 <% @posts.each do |post| %>
   <div class="post-wrapper">
     <h2 class="title"><%= link_to post.title, post %></h2>
