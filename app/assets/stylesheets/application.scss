@@ -30,5 +30,34 @@ $panel-default-heading-bg: teal;
     list-style-type: none;
   }
 }
+.panel  {
+  border-radius: 5px;
+}
+
+.panel-title  {
+    text-align: center;
+}
+  .post-date  {
+    color: orange;
+    text-align: center;
+  }
+
+
+body {
+  background-image: image-url('background1.jpg'); // link to /assets/images/texture.png
+}
+
+.title-header a  {
+font-family: 'Fugaz One', cursive;
+font-size: 70px;
+color: #99FFCC;
+text-decoration: none;
+}
+
+.title-header a:hover  {
+  color: #518E6E;
+  text-shadow: 0px 2px 1px #99FFCC;
+}
+
 
 
