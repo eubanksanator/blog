@@ -1,4 +1,4 @@
-/*
+  /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -14,7 +14,6 @@
  *= require_self
  */
 
-$panel-default-heading-bg: teal;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -23,16 +22,14 @@ $panel-default-heading-bg: teal;
 
 
 .sidebar  {
-  position: fixed;
-  left: 10px;
+  float: right;
 
   .sidebar-links  {
     list-style-type: none;
   }
 }
-.panel  {
-  border-radius: 5px;
-}
+
+
 
 .panel-title  {
     text-align: center;
@@ -42,22 +39,45 @@ $panel-default-heading-bg: teal;
     text-align: center;
   }
 
-
-body {
-  background-image: image-url('background1.jpg'); // link to /assets/images/texture.png
+.img-responsive  {
+  height: 250px;
+  width: 100%;
 }
 
+.panel  {
+  border-radius: 5px;
+  border: 1px solid litegray;
+  margin-top: 10px;
+}
+/*body {
+  background-image: image-url('background1.jpg');
+}
+*/
 .title-header a  {
 font-family: 'Fugaz One', cursive;
 font-size: 70px;
-color: #99FFCC;
+color: #006699;
 text-decoration: none;
+text-shadow: 0px 2px 1px black;
 }
 
 .title-header a:hover  {
   color: #518E6E;
   text-shadow: 0px 2px 1px #99FFCC;
 }
+
+.button  {
+  border-radius: 5px;
+  background-color: white;
+}
+
+.jumbotron  {
+  margin: 30px;
+  margin-bottom: 10px;
+  background-image: url("http://www.damay.com/images/bg.jpg");
+
+}
+
 
 
 

@@ -2,17 +2,34 @@
 
 <%= notice %>
 
-<% @posts.each do |post| %>
-<div class="panel panel-default col-md-offset-2 col-md-8">
-<h3 class="panel-title"><%= link_to post.title, post %></h3>
-  <div class="post-date">
-    <small><%= post.created_at.strftime("%B, %d, %Y") %></small>
-  </div>
+      <div class="panel panel-default sidebar">
+        <div class="panel-heading">
+          <h3 class="panel-title">Social</h3>
+        </div>
+        <div class="panel-body">
+          <ul class="sidebar-links">
+            <li><%= link_to "LinkedIn", "#" %></li>
+            <li><%= link_to "Twitter", '#' %></li>
+            <li><%= link_to "Github", "#" %></li>
+          </ul>
+        </div>
+      </div>
 
-  <div class="panel-body">
-    <%= post.body %>
-  </div>
-</div>
-<% end %>
+
+
+      <% @posts.each do |post| %>
+      <div class="panel panel-default col-md-8">
+        <h3 class="panel-title"><%= link_to post.title, post %></h3>
+        <div class="post-date">
+          <small><%= post.created_at.strftime("%B, %d, %Y") %></small>
+        </div>
+
+        <div class="panel-body well">
+          <%= post.body %>
+        </div>
+      </div>
+      <% end %>
+
+
 
 

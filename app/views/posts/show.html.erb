@@ -7,11 +7,11 @@
     Submitted <%= time_ago_in_words(@post.created_at) %> Ago
   </p>
 
-  <p class="body">
+  <p class="body well">
     <%= @post.body %>
   </p>
 
-  <button class="btn btn-primary"><%= link_to 'Edit', edit_post_url %></button>
+  <button class="btn btn-success"><%= link_to 'Edit', edit_post_url %></button>
   <button class="btn btn-danger"><%= link_to 'Delete', post_url, method: :delete, data: {confirm: "Are you sure you want to delete this post?" } %></button>
 
 
