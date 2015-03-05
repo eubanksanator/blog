@@ -21,20 +21,30 @@
 @import 'normalize';
 
 
+
+
 .sidebar  {
   float: right;
+  width: 300px;
 
   .sidebar-links  {
     list-style-type: none;
   }
 }
-
+.post-panels  {
+  -webkit-box-shadow: inset 0px 0px 9px 1px rgba(31,93,122,0.52);
+  -moz-box-shadow: inset 0px 0px 9px 1px rgba(31,93,122,0.52);
+  box-shadow: inset 0px 0px 9px 1px rgba(31,93,122,0.52);
+}
 
 
 .panel-title  {
     text-align: center;
+    font-family: 'Poiret One', cursive;
+    font-size: 16px;
 }
-  .post-date  {
+
+.post-date  {
     color: orange;
     text-align: center;
   }
@@ -44,15 +54,15 @@
   width: 100%;
 }
 
-.panel  {
+.main-panel  {
   border-radius: 5px;
-  border: 1px solid litegray;
+  border: 1.5px solid gray;
   margin-top: 10px;
+  -webkit-box-shadow: 0px 0px 9px 1px rgba(31,93,122,0.52);
+  -moz-box-shadow: 0px 0px 9px 1px rgba(31,93,122,0.52);
+  box-shadow: 0px 0px 9px 1px rgba(31,93,122,0.52);
 }
-/*body {
-  background-image: image-url('background1.jpg');
-}
-*/
+
 .title-header a  {
 font-family: 'Fugaz One', cursive;
 font-size: 70px;
@@ -75,8 +85,12 @@ text-shadow: 0px 2px 1px black;
   margin: 30px;
   margin-bottom: 10px;
   background-image: url("http://www.damay.com/images/bg.jpg");
-
 }
+
+.nav-home {
+  margin-bottom: 10px;
+}
+
 
 
 
