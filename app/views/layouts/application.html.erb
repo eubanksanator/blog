@@ -1,50 +1,85 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Blog</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-</head>
-<body>
-  <div class="container">
-    <div class="panel panel-default main-panel">
-      <div class="panel-body">
-        <div class="text-center">
-          <div class="row-jumbotron">
-            <div class="jumbotron">
+    <style>
+      /* Only necessary if you are using navbar-fixed-top */
+      body {
+        padding-top: 60px;
+      }
+    </style>
 
-              <div class="header">
-                <h1 class="title-header"><%= link_to 'Travis Eubanks', root_path %><br>
-                  <small>Web Developer</small></h1>
-                </div>
-              </div>
-            </div>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
 
-            <div class="row">
-              <div class="nav-home">
-                <%= link_to 'Home', root_url %> |
-                <%= link_to 'About', "#" %> |
-                <% if admin_signed_in? %>
-                <%= link_to 'New Post', new_post_path %> |
-                <%= link_to 'Sign Out', destroy_admin_session_path, :method => 'delete' %> |
-                <% else %>
-                <%= link_to 'Admin Sign In', admin_session_path %>
-                <% end %>
-              </div>
-            </div>
-          </div>
-          <%= yield %>
-        </div>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
+  <body>
+
+
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/" class="navbar-brand">Blog</a>
       </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/post_comments">Post Comments</a></li>
+          <li><a href="/posts">Posts</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <% if admin_signed_in? %>
+          <li><a href="/users/edit"><%= current_admin.email %></a></li>
+          <li><a href="/users/sign_out" data-method="delete">Sign out</a></li>
+          <% else %>
+          <li><a href="/users/sign_up">Sign up</a></li>
+          <li><a href="/users/sign_in">Sign in</a></li>
+          <% end %>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <div class="container">
+      <% if notice.present? %>
+      <div class="alert alert-dismissable alert-success">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= notice %>
+      </div>
+      <% end %>
+
+      <% if alert.present? %>
+      <div class="alert alert-dismissable alert-warning">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= alert %>
+      </div>
+      <% end %>
+
+      <div class="page-header">
+        <h1>Travis Eubanks <small>Web developer</small></h1>
+      </div>
+
+      <%= yield %>
     </div>
-
-
   </body>
   </html>

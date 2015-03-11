@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'starter_generators', :git => "git://github.com/rbetina/starter_generators.git", :branch => "panels"
+
 gem 'bootstrap-sass'
 gem 'devise'
 
