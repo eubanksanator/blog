@@ -22,7 +22,15 @@
 
 
 
+.page-header{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  letter-spacing: -.12em;
+}
 
+.signin {
+  padding-right: 20px;
+}
 
 .sidebar  {
   float: right;
@@ -34,6 +42,20 @@
   }
 }
 
+.panel-title  {
+  font-family: 'Montserrat Subrayada', sans-serif;
+  padding-top: 10px;
+  font-weight: bold;
+  color: #091854;
+}
+
+.post-date  {
+margin-bottom: 5px;
+}
+
+.panel {
+  background-image: url('http://fc04.deviantart.net/fs70/i/2012/099/5/d/graphic_design_practise_12_by_karoliskj-d49nt8e.jpg');
+}
 
 
 

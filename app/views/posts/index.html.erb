@@ -8,30 +8,29 @@
     </div>
     <div class="panel-body">
       <ul class="sidebar-links">
-        <li><%= link_to "LinkedIn", "#" %></li>
-        <li><%= link_to "Twitter", '#' %></li>
-        <li><%= link_to "Github", "#" %></li>
+        <li><%= link_to "LinkedIn", 'https://www.linkedin.com/in/traviseubanks' %></li>
+        <li><%= link_to "Twitter", 'https://twitter.com/teubanks13?lang=en' %></li>
+        <li><%= link_to "Github", "https://github.com/eubanksanator" %></li>
       </ul>
     </div>
   </div>
 </div>
 
 
-<% @posts.each do |post| %>
-
-<div class="panel panel-default post-panels col-xs-12 col-sm-8 col-md-8">
-  <h3 class="panel-title"><%= link_to post.title, post %></h3>
-  <div class="post-date">
-    <small><%= post.created_at.strftime("%B, %d, %Y") %></small>
+<div class="panel-background">
+  <div class="panel panel-default post-panels col-xs-12 col-sm-8 col-md-8">
+    <% @posts.each do |post| %>
+    <h3 class="panel-title"><%= link_to post.title, post %></h3>
+    <div class="post-date">
+      <small><%= post.created_at.strftime("%B, %d, %Y") %></small>
+    </div>
+    <!-- WANT TO ADD COMMENTS INTO THE POST PANEL -->
+    <div class="panel-body well">
+      <%= post.body %>
+    </div>
+    <% end %>
   </div>
-
-  <div class="panel-body well">
-    <%= post.body %>
-  </div>
-
-
 </div>
-<% end %>
 
 
 

@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat+Subrayada' rel='stylesheet' type='text/css'>
 
     <style>
       /* Only necessary if you are using navbar-fixed-top */
@@ -47,7 +49,7 @@
           <li><%= link_to "Posts", posts_path %></li>
           <li><a href="#">About</a></li>
         </ul>
-
+      <div class="signin">
         <ul class="nav navbar-nav navbar-right">
           <% if admin_signed_in? %>
           <li><%= link_to "Sign Out", destroy_admin_session_path, method: 'delete' %></li>
@@ -56,6 +58,7 @@
           <li><%= link_to "Sign In", new_admin_session_path %></li>
           <% end %>
         </ul>
+        </div>
       </div><!-- /.navbar-collapse -->
     </nav>
 
