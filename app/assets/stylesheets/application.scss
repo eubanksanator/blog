@@ -20,7 +20,13 @@
 
 @import 'normalize';
 
+.well  {
+  background-color: white;
+}
 
+body {
+  padding-top: 60px;
+}
 
 .page-header{
   font-family: 'Montserrat', sans-serif;

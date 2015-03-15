@@ -4,14 +4,17 @@
 <div class="sidebar">
   <div class="panel panel-default hidden-xs">
     <div class="panel-heading">
-      <h3 class="panel-title">Social</h3>
+      <h3 id="sidebar-title" class="panel-title">Social<i id="chevron" class="fa fa-chevron-down pull-right"></i>
+</h3>
     </div>
     <div class="panel-body">
-      <ul class="sidebar-links">
-        <li><%= link_to "LinkedIn", 'https://www.linkedin.com/in/traviseubanks' %></li>
-        <li><%= link_to "Twitter", 'https://twitter.com/teubanks13?lang=en' %></li>
-        <li><%= link_to "Github", "https://github.com/eubanksanator" %></li>
-      </ul>
+      <div id="sidebar">
+        <ul class="sidebar-links">
+          <li><%= link_to "LinkedIn", 'https://www.linkedin.com/in/traviseubanks' %></li>
+          <li><%= link_to "Twitter", 'https://twitter.com/teubanks13?lang=en' %></li>
+          <li><%= link_to "Github", "https://github.com/eubanksanator" %></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -37,5 +40,22 @@
 </div>
 
 
+<script>
+
+  var main = function() {
+    $('#sidebar-title').click(function() {
+      var $icon = $(this).find('i');
+      if ($icon.hasClass('fa-chevron-down')) {
+        $icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+      } else {
+        $icon.addClass('fa-chevron-down').removeClass('fa-chevron-up');
+      }
+      $( "#sidebar" ).slideToggle( "slow" );
+    });
+  };
+  $(document).ready(main);
+
+
+</script>
 
 
