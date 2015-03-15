@@ -53,7 +53,7 @@
         <ul class="nav navbar-nav navbar-right">
           <% if admin_signed_in? %>
           <li><%= link_to "Sign Out", destroy_admin_session_path, method: 'delete' %></li>
-          <li><%= link_to current_admin.email, edit_admin_path %></li>
+          <li><%= link_to current_admin.email, edit_admin_password_path %></li>
           <% else %>
           <li><%= link_to "Sign In", new_admin_session_path %></li>
           <% end %>
@@ -79,6 +79,7 @@
 
       <div class="page-header">
         <h1>Travis Eubanks <small>Web developer</small></h1>
+        <%= link_to 'New Post', new_post_path %>
       </div>
 
       <%= yield %>

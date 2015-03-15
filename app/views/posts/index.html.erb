@@ -26,7 +26,11 @@
     </div>
     <!-- WANT TO ADD COMMENTS INTO THE POST PANEL -->
     <div class="panel-body well">
+      <% if post.body.length > 150 %>
+      <%= truncate(post.body, length: 150) %> <%= link_to 'read more', post_path(post) %>
+      <% else %>
       <%= post.body %>
+      <% end %>
     </div>
     <% end %>
   </div>
