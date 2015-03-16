@@ -1,27 +1,11 @@
 
 
 <%= notice %>
-<div class="sidebar">
-  <div class="panel panel-default hidden-xs">
-    <div class="panel-heading">
-      <h3 id="sidebar-title" class="panel-title">Social<i id="chevron" class="fa fa-chevron-down pull-right"></i>
-</h3>
-    </div>
-    <div class="panel-body">
-      <div id="sidebar">
-        <ul class="sidebar-links">
-          <li><%= link_to "LinkedIn", 'https://www.linkedin.com/in/traviseubanks' %></li>
-          <li><%= link_to "Twitter", 'https://twitter.com/teubanks13?lang=en' %></li>
-          <li><%= link_to "Github", "https://github.com/eubanksanator" %></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 
 <div class="panel-background">
-  <div class="panel panel-default post-panels col-xs-12 col-sm-8 col-md-8">
+  <div class="panel panel-default post-panels col-xs-12 col-sm-8 col-md-offset-3 col-md-9">
     <% @posts.each do |post| %>
     <h3 class="panel-title"><%= link_to post.title, post %></h3>
     <div class="post-date">
@@ -40,8 +24,10 @@
 </div>
 
 
-<script>
 
+
+
+<script>
   var main = function() {
     $('#sidebar-title').click(function() {
       var $icon = $(this).find('i');
@@ -57,5 +43,3 @@
 
 
 </script>
-
-

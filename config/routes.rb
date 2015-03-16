@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   devise_for :admins
 
   resources :posts do
@@ -7,4 +8,6 @@ Rails.application.routes.draw do
   end
 
   root 'posts#index'
+  get '/about', to: 'posts#about'
+
 end
