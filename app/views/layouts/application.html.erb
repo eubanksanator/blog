@@ -43,37 +43,6 @@
       <% end %>
 
 
-          <div id="sidebar-left">
-            <div id="logo">
-              <%= link_to root_path do %>
-              <%= image_tag 'background.jpg', class: 'myphoto' %>
-              <% end %>
-            </div>
-
-            <ul>
-              <li class="category">Travis Eubanks<br><small>Web Developer</small></li>
-              <li><%= link_to "Blog", root_path %></li>
-              <li><%= link_to "About", '#' %></li>
-              <li><%= link_to "ALL Posts", posts_path %></li>
-            </ul>
-
-            <ul>
-              <li class="category">Social</li>
-              <li><%= link_to "LinkedIn", 'https://www.linkedin.com/in/traviseubanks' %></li>
-              <li><%= link_to "Twitter", 'https://twitter.com/teubanks13?lang=en' %></li>
-              <li><%= link_to "Github", "https://github.com/eubanksanator" %></li>
-            </ul>
-
-            <% if admin_signed_in? %>
-            <p class="sign_in"><%= link_to "Admin Login", new_admin_session_path %></p>
-            <% end %>
-          </div>
-
-
-
-
-
-
     <%= yield %>
   </div>
 
