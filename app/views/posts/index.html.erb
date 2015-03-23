@@ -15,6 +15,11 @@
       <li><%= link_to "Twitter", "https://twitter.com/teubanks13" %></li>
       <li><%= link_to "Github", "https://github.com/eubanksanator" %></li>
       <li><%= link_to "LinkedIn", "https://www.linkedin.com/in/traviseubanks" %></li>
+      <li><% if admin_signed_in? %>
+          <%= link_to "New Post", new_post_path %>
+          <%= link_to "Sign Out", destroy_admin_session_path, method: 'delete' %>
+          <% end %>
+      </li>
     </ul>
   </header>
 </div><!--ends sidebar -->
